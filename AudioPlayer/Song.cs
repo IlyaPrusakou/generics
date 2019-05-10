@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace Audioplayer
 {
-    public class Song: ItemPlaying
+    public class Song: ItemPlaying // GenericPlayerHomework
     {
-        public string Lyrics { get; set; }
-        public Album Album { get; set; }
-        public Artist Artist { get; set; }
-        public GenericPlayer<Song> Player { get; set; }
- 
-        public override void LikeMethod()
+        public string Lyrics { get; set; } // GenericPlayerHomework
+        public Album Album { get; set; } // GenericPlayerHomework
+        public Artist Artist { get; set; } // GenericPlayerHomework
+        public GenericPlayer<Song> Player { get; set; } // GenericPlayerHomework
+
+        public override void LikeMethod() // GenericPlayerHomework
         {
-            base.Like = true;
+            base.Like = true; // GenericPlayerHomework
         }
-        public override void DislikeMethod()
+        public override void DislikeMethod() // GenericPlayerHomework
         {
-            base.Like = false;
+            base.Like = false; // GenericPlayerHomework
         }
     }
 }
