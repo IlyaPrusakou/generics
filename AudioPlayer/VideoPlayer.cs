@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AudioPlayer
 {
-    class VideoPlayer: GenericPlayer<Video>
+    class VideoPlayer: GenericPlayer<Video> // GenericPlayerHomework
     {
-        public VideoPlayer(Skin skn) : base(skn)
+        public VideoPlayer(Skin skn) : base(skn) // GenericPlayerHomework
         {
 
         }

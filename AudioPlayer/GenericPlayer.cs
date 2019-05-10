@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace AudioPlayer
 {
-    public class GenericPlayer<T>  where T: ItemPlaying 
+    public class GenericPlayer<T>  where T: ItemPlaying // GenericPlayerHomework 
     {
         private int volume;
         private bool playing;
         public const int minVolume = 0;
         public const int maxVolume = 100;
         public bool IsLock { get; set; }
-        public List<T> Items { get; set; }
+        public List<T> Items { get; set; } // GenericPlayerHomework
         public Random Rnd { get; set; } = new Random();
         public Skin SkinForm { get; set; }
         public GenericPlayer()
@@ -57,14 +57,14 @@ namespace AudioPlayer
             }
 
         }
-        public void ParametrSong(params T[] itemList)
+        public void ParametrSong(params T[] itemList) // GenericPlayerHomework
         {
             foreach (T item in itemList)
             {
                 SkinForm.Render(item.Title); 
             }
         }
-        public (string Title, bool IsNext, (int Sec, int Min, int Hour)) GetItemData(T item) 
+        public (string Title, bool IsNext, (int Sec, int Min, int Hour)) GetItemData(T item)  // GenericPlayerHomework
         {
             var (str, boo, sec, min, hour) = item;
             string s = str;
@@ -74,7 +74,7 @@ namespace AudioPlayer
             int f2 = hour;
             return (Title: s, IsNext: d, (Sec: f, Min: f1, Hour: f2));
         }
-        public void ListItem(List<T> list)
+        public void ListItem(List<T> list) // GenericPlayerHomework
         {
             foreach (T item in list)
             {
@@ -88,7 +88,7 @@ namespace AudioPlayer
             }
         }
 
-        public List<T> FilterByGenres(List<T> items, Genres genre) // перенёс из program
+        public List<T> FilterByGenres(List<T> items, Genres genre)  // GenericPlayerHomework
         {
             List<T> FilterdList = new List<T>();
             IEnumerable<T> selectedItems = from t in items

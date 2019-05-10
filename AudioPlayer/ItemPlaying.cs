@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace AudioPlayer
 {
-    public abstract class ItemPlaying
+    public abstract class ItemPlaying // GenericPlayerHomework
     {
-        public int Duration { get; set; }
-        public string Title { get; set; }
-        public string Path { get; set; }
-        public Genres Genre { get; set; }
-        public List<Playlist> playlists = new List<Playlist>();
-        public bool IsNext { get; set; }
-        public bool? Like { get; set; }
+        public int Duration { get; set; } // GenericPlayerHomework
+        public string Title { get; set; } // GenericPlayerHomework
+        public string Path { get; set; } // GenericPlayerHomework
+        public Genres Genre { get; set; } // GenericPlayerHomework
+        public List<Playlist> playlists = new List<Playlist>(); // GenericPlayerHomework
+        public bool IsNext { get; set; } // GenericPlayerHomework
+        public bool? Like { get; set; } // GenericPlayerHomework
 
-        public abstract void LikeMethod();
+        public abstract void LikeMethod(); // GenericPlayerHomework
 
-        public abstract void DislikeMethod();
-        
+        public abstract void DislikeMethod(); // GenericPlayerHomework
+
         public void Deconstruct(out string str, out bool boo, out int sec, out int min, out int hour) 
         {
             str = Title; 
